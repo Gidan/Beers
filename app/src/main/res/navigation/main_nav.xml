@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/beersListFragment">
+
+    <fragment
+        android:id="@+id/beersListFragment"
+        android:name="com.amatucci.andrea.beers.BeersListFragment"
+        android:label="fragment_beers_list"
+        tools:layout="@layout/fragment_beers_list" />
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.amatucci.andrea.beers.CreditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" />
+</navigation>

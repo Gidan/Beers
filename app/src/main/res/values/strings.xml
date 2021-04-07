@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Beers</string>
+
+    <string name="nav_menu_list">Beers</string>
+    <string name="nav_menu_credits">Credits</string>
+    <string name="title_beers">Beers</string>
+    <string name="title_credits">Credits</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="by_andrea_amatucci">by Andrea Amatucci</string>
+
 </resources>
