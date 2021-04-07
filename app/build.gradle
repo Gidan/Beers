@@ -30,10 +30,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def koin_version="2.2.1"
     def lifecycle_version = "2.3.1"
     def retrofit_version = "2.9.0"
@@ -51,6 +55,10 @@ dependencies {
     // arch lifecycle
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    // navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
 
     // koin
     implementation "org.koin:koin-android-viewmodel:$koin_version"
