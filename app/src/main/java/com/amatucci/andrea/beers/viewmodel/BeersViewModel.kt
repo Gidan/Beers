@@ -1,12 +1,14 @@
 package com.amatucci.andrea.beers.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.amatucci.andrea.beers.data.repository.BeersRepository
 
 class BeersViewModel(private val beersRepository: BeersRepository) : ViewModel() {
 
-    private val _lastPage = MutableLiveData(0)
+    private var _lastPage = 0
+    val loading : LiveData<Boolean> = beersRepository.loading
 
     val beers = beersRepository.beers
 
@@ -15,7 +17,12 @@ class BeersViewModel(private val beersRepository: BeersRepository) : ViewModel()
     }
 
     fun nextPage() {
-        beersRepository.getBeers(_lastPage.value!! + 1)
+        beersRepository.getBeers(++_lastPage)
+    }
+
+    fun refresh(){
+        _lastPage = 0
+        nextPage()
     }
 
 

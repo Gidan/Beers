@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/beersListFragment"
-        android:name="com.amatucci.andrea.beers.BeersListFragment"
+        android:name="com.amatucci.andrea.beers.ui.BeersListFragment"
         android:label="fragment_beers_list"
         tools:layout="@layout/fragment_beers_list" />
     <fragment

@@ -5,13 +5,10 @@ import com.squareup.moshi.Json
 data class Beer(
     val id: Int,
     val name: String,
-    @Json(name = "tagline")
-    val tagLine: String,
-    @Json(name = "first_brewed")
-    val firstBrewed: String,
+    @field:Json(name = "tagline") val tagLine: String,
+    @field:Json(name = "first_brewed") val firstBrewed: String,
     val description: String,
-    @Json(name = "image_url")
-    val imageUrl: String?,
+    @field:Json(name = "image_url") val imageUrl: String?,
     val abv: Double,
     val ebc: Int?
 )
