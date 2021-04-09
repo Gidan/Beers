@@ -44,6 +44,7 @@ class BeersListFragment : Fragment() {
 
         beersViewModel.beers.observe(viewLifecycleOwner){
             binding.swipeRefresh.isRefreshing = false
+            adapter.beers.clear()
             adapter.beers.addAll(it)
             adapter.notifyDataSetChanged()
         }

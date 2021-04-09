@@ -10,5 +10,5 @@ data class Beer(
     val description: String,
     @field:Json(name = "image_url") val imageUrl: String?,
     val abv: Double,
-    val ebc: Int?
+    val ebc: Double?
 )
