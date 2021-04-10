@@ -18,6 +18,7 @@ interface BeersApi {
     @GET("beers")
     suspend fun getBeers(
         @Query("page") page: Int? = 1,
+        @Query("brewed_after") brewedAfter: String? = null,
         @Query("brewed_before") brewedBefore: String? = null
     ): List<Beer>
 

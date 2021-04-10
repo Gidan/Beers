@@ -10,4 +10,6 @@
     <string name="by_andrea_amatucci">by Andrea Amatucci</string>
     <string name="cd_beer_image">Beer image</string>
 
+    <string name="action_filter">filter</string>
+
 </resources>

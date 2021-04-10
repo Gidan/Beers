@@ -5,11 +5,12 @@ import androidx.lifecycle.*
 import com.amatucci.andrea.beers.data.model.Beer
 import com.amatucci.andrea.beers.data.repository.BeersRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class BeersViewModel(private val beersRepository: BeersRepository) : ViewModel() {
 
     private val page = MutableLiveData(1)
+    val after = MutableLiveData<String>()
+    val before = MutableLiveData<String>()
     private var lastPage = 0
 
     val loading = MutableLiveData(false)
@@ -30,6 +31,13 @@ class BeersViewModel(private val beersRepository: BeersRepository) : ViewModel()
             }
         }
 
+        after.observeForever {
+            refresh()
+        }
+        before.observeForever {
+            refresh()
+        }
+
         nextPage()
     }
 
@@ -42,7 +50,7 @@ class BeersViewModel(private val beersRepository: BeersRepository) : ViewModel()
             Log.d("BeersViewModel", "request page $page")
             loading.postValue(true)
             try {
-                emit(beersRepository.getBeers(page))
+                emit(beersRepository.getBeers(page, after.value, before.value))
                 lastPage = page
             } catch (exception: Exception) {
                 Log.e("BeersViewModel", exception.message ?: "fetch error")

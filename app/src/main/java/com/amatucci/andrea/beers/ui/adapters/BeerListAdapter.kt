@@ -43,6 +43,7 @@ class BeerListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     txtBeerName.text = it.name.toUpperCase(Locale.getDefault())
                     txtTagline.text = it.tagLine
                     txtId.text = it.id.toString()
+                    txtFirstBrewed.text = it.firstBrewed
                     Glide.with(root)
                         .load(it.imageUrl)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
