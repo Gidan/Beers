@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:elevation="5dp"
-        android:background="@android:color/white"
+        android:background="?filterBarColor"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
