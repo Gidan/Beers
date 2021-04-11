@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.amatucci.andrea.beers.R
 import com.amatucci.andrea.beers.data.model.Beer
 import com.amatucci.andrea.beers.databinding.ListItemBeerBinding
 import com.amatucci.andrea.beers.util.BeerColor
