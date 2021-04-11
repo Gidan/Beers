@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/brewed_after"
-                android:textColor="@android:color/white"
+                android:textColor="?filterTextColor"
                 />
             <Space
                 android:layout_width="5dp"
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="01-2020"
-                android:textColor="@android:color/white"
+                android:textColor="?filterTextColor"
                 android:textStyle="bold"
                 />
         </LinearLayout>
@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/brewed_before"
-                android:textColor="@android:color/white"
+                android:textColor="?filterTextColor"
                 />
             <Space
                 android:layout_width="5dp"
@@ -75,11 +75,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="01-2020"
-                android:textColor="@android:color/white"
+                android:textColor="?filterTextColor"
                 android:textStyle="bold"
                 />
         </LinearLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
