@@ -1,20 +1,13 @@
 package com.amatucci.andrea.beers.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.transition.TransitionManager
-import com.amatucci.andrea.beers.R
 import com.amatucci.andrea.beers.databinding.FragmentBeersListBinding
 import com.amatucci.andrea.beers.ui.adapters.BeerListAdapter
 import com.amatucci.andrea.beers.util.PaginationListener
 import com.amatucci.andrea.beers.viewmodel.BeersViewModel
-import com.google.android.material.datepicker.MaterialDatePicker
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class BeersListFragment : Fragment() {
@@ -26,14 +19,9 @@ class BeersListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        setHasOptionsMenu(true)
         binding = FragmentBeersListBinding.inflate(layoutInflater)
         setup()
         return binding.root
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu, menu);
     }
 
     private fun setup(){
@@ -64,22 +52,6 @@ class BeersListFragment : Fragment() {
             beersViewModel.refresh()
         }
 
-//        beersViewModel.showFilter.observe(viewLifecycleOwner){
-//            binding.filterLayout.animate().y(if (it) 0f else -binding.filterLayout.height.toFloat()).setDuration(200).start()
-//
-//            val constraintSet1 = ConstraintSet()
-//            constraintSet1.clone(binding.beersListRoot)
-//            val constraintSet2 = ConstraintSet()
-//            constraintSet2.clone(binding.beersListRoot)
-//
-//            constraintSet2.connect(R.id.filter_layout, ConstraintSet.BOTTOM, R.id.beers_list_root, ConstraintSet.TOP,0);
-//            constraintSet2.connect(R.id.swipe_refresh, ConstraintSet.TOP, R.id.beers_list_root, ConstraintSet.TOP,0);
-//
-//            TransitionManager.beginDelayedTransition(binding.beersListRoot)
-//            val constraint = if (it) constraintSet2 else constraintSet1
-//            constraint.applyTo(binding.beersListRoot)
-//        }
-
         binding.filterAfter.setOnClickListener {
             MonthYearPickerDialog().apply {
                 setListener { _, year, month, _ ->
@@ -105,29 +77,6 @@ class BeersListFragment : Fragment() {
         }
         beersViewModel.before.observe(viewLifecycleOwner){
             binding.filterBeforeValue.text = it
-        }
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.action_filter -> {
-            Log.d("MainActivity", "filter pressed")
-//            val builder = MaterialDatePicker.Builder.dateRangePicker()
-//            val picker = builder.build()
-//            picker.show(activity?.supportFragmentManager!!, picker.toString())
-
-//            MonthYearPickerDialog().apply {
-//                setListener { _, year, month, dayOfMonth ->
-//                    val strMonth = month.toString().padStart(2, '0')
-//                    beersViewModel.after.value = "$strMonth-$year"
-//                }
-//                show(this@BeersListFragment.parentFragmentManager, "MonthYearPickerDialog")
-//            }
-
-            true
-        }
-
-        else -> {
-            false
         }
     }
 
