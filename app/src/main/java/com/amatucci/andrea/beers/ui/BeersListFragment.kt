@@ -74,9 +74,18 @@ class BeersListFragment : Fragment() {
 
         beersViewModel.after.observe(viewLifecycleOwner){
             binding.filterAfterValue.text = it
+            binding.btnClearFilterAfter.visibility = if (it != null) View.VISIBLE else View.INVISIBLE
         }
         beersViewModel.before.observe(viewLifecycleOwner){
             binding.filterBeforeValue.text = it
+            binding.btnClearFilterBefore.visibility = if (it != null) View.VISIBLE else View.INVISIBLE
+        }
+
+        binding.btnClearFilterAfter.setOnClickListener{
+            beersViewModel.after.value = null
+        }
+        binding.btnClearFilterBefore.setOnClickListener{
+            beersViewModel.before.value = null
         }
     }
 

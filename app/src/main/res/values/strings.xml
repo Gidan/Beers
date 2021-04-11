@@ -11,8 +11,8 @@
     <string name="cd_beer_image">Beer image</string>
 
     <string name="action_filter">filter</string>
-    <string name="brewed_after">brewed after:</string>
-    <string name="brewed_before">brewed before:</string>
+    <string name="brewed_after">after:</string>
+    <string name="brewed_before">before:</string>
 
     <string name="dialogTitle">Select month</string>
     <string name="ok">Ok</string>
@@ -30,5 +30,8 @@
     <string name="month_Oct">Oct</string>
     <string name="month_Nov">Nov</string>
     <string name="month_Dec">Dec</string>
+    <string name="brewed">Brewed:</string>
+    <string name="clear_after_filter">clear after filter</string>
+    <string name="clear_before_filter">clear before filter</string>
 
 </resources>
