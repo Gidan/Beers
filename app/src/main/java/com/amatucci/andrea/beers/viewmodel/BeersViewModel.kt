@@ -11,7 +11,7 @@ class BeersViewModel(private val beersRepository: BeersRepository) : ViewModel()
     private val page = MutableLiveData(1)
     val after = MutableLiveData<String>()
     val before = MutableLiveData<String>()
-    val showFilter = MutableLiveData(false)
+
     private var lastPage = 0
 
     val loading = MutableLiveData(false)
@@ -65,10 +65,6 @@ class BeersViewModel(private val beersRepository: BeersRepository) : ViewModel()
         list.clear()
         lastPage = 0
         nextPage()
-    }
-
-    fun toggleFilterLayout() {
-        showFilter.value = !showFilter.value!!
     }
 
 

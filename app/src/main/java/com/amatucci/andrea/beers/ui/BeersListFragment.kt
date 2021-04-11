@@ -123,7 +123,6 @@ class BeersListFragment : Fragment() {
 //                show(this@BeersListFragment.parentFragmentManager, "MonthYearPickerDialog")
 //            }
 
-            beersViewModel.toggleFilterLayout()
             true
         }
 
