@@ -12,6 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="windowColorBackground">@color/white</item>
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+
         <item name="filterBarColor">@color/white</item>
         <item name="filterTextColor">@color/white</item>
     </style>

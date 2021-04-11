@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="windowColorBackground" format="color"/>
     <attr name="filterBarColor" format="color"/>
     <attr name="filterTextColor" format="color"/>
 </resources>
