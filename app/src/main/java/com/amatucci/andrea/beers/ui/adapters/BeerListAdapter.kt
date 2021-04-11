@@ -10,6 +10,7 @@ import com.amatucci.andrea.beers.databinding.ListItemBeerBinding
 import com.amatucci.andrea.beers.util.BeerColor
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -48,7 +49,7 @@ class BeerListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     Glide.with(root)
                         .load(it.imageUrl)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
-                        .placeholder(R.drawable.beer_ph)
+                        .transition(DrawableTransitionOptions.withCrossFade())
                         .centerInside()
                         .into(ivBeer)
 
