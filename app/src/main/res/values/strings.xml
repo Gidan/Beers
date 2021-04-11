@@ -14,4 +14,21 @@
     <string name="brewed_after">brewed after:</string>
     <string name="brewed_before">brewed before:</string>
 
+    <string name="dialogTitle">Select month</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="month_Jan">Jan</string>
+    <string name="month_Feb">Feb</string>
+    <string name="month_Mar">Mar</string>
+    <string name="month_Apr">Apr</string>
+    <string name="month_May">May</string>
+    <string name="month_Jun">June</string>
+    <string name="month_Jul">July</string>
+    <string name="month_Aug">Aug</string>
+    <string name="month_Sep">Sep</string>
+    <string name="month_Oct">Oct</string>
+    <string name="month_Nov">Nov</string>
+    <string name="month_Dec">Dec</string>
+
 </resources>
