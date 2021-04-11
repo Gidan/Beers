@@ -11,5 +11,7 @@
     <string name="cd_beer_image">Beer image</string>
 
     <string name="action_filter">filter</string>
+    <string name="brewed_after">brewed after:</string>
+    <string name="brewed_before">brewed before:</string>
 
 </resources>

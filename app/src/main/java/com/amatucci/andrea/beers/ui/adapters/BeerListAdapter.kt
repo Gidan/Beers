@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.amatucci.andrea.beers.R
 import com.amatucci.andrea.beers.data.model.Beer
 import com.amatucci.andrea.beers.databinding.ListItemBeerBinding
+import com.amatucci.andrea.beers.util.BeerColor
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import java.util.*
@@ -38,7 +39,7 @@ class BeerListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class BeerViewHolder(private val binding: ListItemBeerBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(beer : Beer) {
             binding.apply {
-                beerBlendColor.setBackgroundColor(ContextCompat.getColor(root.context, android.R.color.transparent))
+
                 beer.let {
                     txtBeerName.text = it.name.toUpperCase(Locale.getDefault())
                     txtTagline.text = it.tagLine
@@ -50,6 +51,8 @@ class BeerListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                         .placeholder(R.drawable.beer_ph)
                         .centerInside()
                         .into(ivBeer)
+
+                    beerColor.setBackgroundColor(ContextCompat.getColor(root.context, if (it.srm != null) BeerColor.getColorResourceId(it.srm) else android.R.color.transparent))
                 }
             }
         }

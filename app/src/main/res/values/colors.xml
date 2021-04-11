@@ -10,16 +10,16 @@
 
 
     <color name="beer_srm_1">#F6F3A5</color>
-    <color name="beer_srm_2">#F7DB59</color>
-    <color name="beer_srm_3">#F0C441</color>
-    <color name="beer_srm_4">#EFB22B</color>
     <color name="beer_srm_5">#E89F1A</color>
-    <color name="beer_srm_6">#DD8B16</color>
-    <color name="beer_srm_7">#D67D13</color>
-    <color name="beer_srm_8">#CB6C15</color>
+    <color name="beer_srm_10">#AD4516</color>
+    <color name="beer_srm_15">#9D3414</color>
+    <color name="beer_srm_20">#832211</color>
+    <color name="beer_srm_25">#68160F</color>
+    <color name="beer_srm_30">#520B0B</color>
+    <color name="beer_srm_35">#41020C</color>
+    <color name="beer_srm_40">#1A0A0B</color>
 
-    <color name="beer_srm_9">#C45F17</color>
-    <color name="beer_srm_16">#9B3113</color>
+
 
 
 </resources>

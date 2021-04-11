@@ -45,7 +45,7 @@ class MonthYearPickerDialog(private val date: Date = Date()) : DialogFragment() 
         return AlertDialog.Builder(requireContext())
             .setTitle("Please Select View Month")
             .setView(binding.root)
-            .setPositiveButton("Ok") { _, _ -> listener?.onDateSet(null, binding.pickerYear.value, binding.pickerMonth.value, 1) }
+            .setPositiveButton("Ok") { _, _ -> listener?.onDateSet(null, binding.pickerYear.value, binding.pickerMonth.value + 1, 1) }
             .setNegativeButton("Cancel") { _, _ -> dialog?.cancel() }
             .create()
     }
